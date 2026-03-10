@@ -73,21 +73,21 @@
 | CLI-02 | Phase 1 | Pending |
 | CLI-03 | Phase 1 | Pending |
 | CLI-04 | Phase 1 | Pending |
+| PRIV-02 | Phase 1 | Pending |
 | PARSE-01 | Phase 2 | Pending |
 | PARSE-02 | Phase 2 | Pending |
 | PARSE-03 | Phase 2 | Pending |
 | PARSE-04 | Phase 2 | Pending |
 | PRIV-01 | Phase 2 | Pending |
-| PRIV-02 | Phase 5 | Pending |
-| LLM-01 | Phase 5 | Pending |
-| LLM-02 | Phase 5 | Pending |
-| LLM-03 | Phase 5 | Pending |
-| LLM-04 | Phase 5 | Pending |
-| LLM-05 | Phase 5 | Pending |
-| LLM-06 | Phase 5 | Pending |
-| OUT-01 | Phase 6 | Pending |
-| OUT-02 | Phase 6 | Pending |
-| OUT-03 | Phase 6 | Pending |
+| LLM-01 | Phase 4 | Pending |
+| LLM-02 | Phase 4 | Pending |
+| LLM-03 | Phase 4 | Pending |
+| LLM-04 | Phase 4 | Pending |
+| LLM-05 | Phase 4 | Pending |
+| LLM-06 | Phase 4 | Pending |
+| OUT-01 | Phase 5 | Pending |
+| OUT-02 | Phase 5 | Pending |
+| OUT-03 | Phase 5 | Pending |
 
 **Coverage:**
 - v1 requirements: 19 total
@@ -96,4 +96,4 @@
 
 ---
 *Requirements defined: 2026-03-10*
-*Last updated: 2026-03-10 after initial definition*
+*Last updated: 2026-03-10 after roadmap creation (phase assignments finalized)*
