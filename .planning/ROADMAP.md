@@ -64,10 +64,11 @@ Plans:
   2. Running `docgen index <path>` twice on the same unchanged repo does not re-embed files that have not changed (hash-based skip)
   3. A second concurrent invocation of `docgen index` fails with a clear lock error rather than corrupting the vector store
   4. No source code file contents are sent to any external service during the indexing step
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: TBD
+- [ ] 03-01-PLAN.md — VectorRepository class (ChromaDB + filelock), hash-based dedup
+- [ ] 03-02-PLAN.md — Embedder (fastembed), ingest pipeline, docgen index CLI wiring
 
 ---
 
@@ -83,7 +84,8 @@ Plans:
 **Plans**: TBD
 
 Plans:
-- [ ] 04-01: TBD
+- [ ] 04-01-PLAN.md — Resilient LLM Client Interface, Retry handler (tenacity), Factory
+- [ ] 04-02-PLAN.md — Gemini/Groq drivers, Prompt engineering, Context assembly
 
 ---
 
@@ -100,7 +102,8 @@ Plans:
 **Plans**: TBD
 
 Plans:
-- [ ] 05-01: TBD
+- [ ] 05-01-PLAN.md — Jinja2 Template Engineering, Generator logic, Document Writer
+- [ ] 05-02-PLAN.md — Orchestration pipeline, UI progress summary, E2E validation
 
 ---
 
@@ -112,7 +115,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 0/2 | Planned | - |
-| 2. Parser | 0/TBD | Not started | - |
-| 3. Ingest Pipeline | 0/TBD | Not started | - |
-| 4. LLM Client | 0/TBD | Not started | - |
-| 5. Output and Integration | 0/TBD | Not started | - |
+| 2. Parser | 0/2 | Planned | - |
+| 3. Ingest Pipeline | 0/2 | Planned | - |
+| 4. LLM Client | 0/2 | Planned | - |
+| 5. Output and Integration | 0/2 | Planned | - |
