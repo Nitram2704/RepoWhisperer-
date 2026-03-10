@@ -30,10 +30,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. API key is loaded from an environment variable or config file and never appears in logs or output
   4. A progress indicator (spinner or bar) is visible during any operation that takes more than one second
   5. Running `docgen index <path>` and `docgen generate` as separate commands does not crash (stubs accepted at this stage)
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: TBD
+- [ ] 01-01-PLAN.md — Scaffold package, config loading, UI helpers, CodeChunk data contract
+- [ ] 01-02-PLAN.md — Wire CLI commands (run, index, generate), install and verify
 
 ---
 
@@ -109,7 +110,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/TBD | Not started | - |
+| 1. Foundation | 0/2 | Planned | - |
 | 2. Parser | 0/TBD | Not started | - |
 | 3. Ingest Pipeline | 0/TBD | Not started | - |
 | 4. LLM Client | 0/TBD | Not started | - |
