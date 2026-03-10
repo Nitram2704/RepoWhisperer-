@@ -47,10 +47,11 @@ Plans:
   2. Parser produces at least one `CodeChunk` per function and class in a sample JS/TS file, never splitting mid-syntax
   3. A repo containing `.env`, `*.key`, or `*.pem` files produces zero chunks from those files
   4. Files listed in `.gitignore` are never parsed or chunked
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: TBD
+- [ ] 02-01-PLAN.md — Install pathspec, file filter gate (sensitive + gitignore), Python ast parser
+- [ ] 02-02-PLAN.md — Install tree-sitter, JS/TS/TSX parser, directory walk + dispatch wiring
 
 ---
 
