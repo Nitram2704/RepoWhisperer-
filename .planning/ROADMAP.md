@@ -81,11 +81,11 @@ Plans:
   2. Setting `DOCGEN_PROVIDER=openrouter` or `DOCGEN_PROVIDER=deepseek` causes the tool to use those providers without code changes
   3. When an LLM provider returns a 429 response, the tool automatically retries with exponential backoff and does not crash or produce partial output
   4. The active provider and model can be set via an environment variable or config file without editing source code
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — Resilient LLM Client Interface, Retry handler (tenacity), Factory
-- [ ] 04-02-PLAN.md — Gemini/Groq drivers, Prompt engineering, Context assembly
+- [ ] 04-01-PLAN.md — LLM provider package: base ABC, retry decorators, all 4 providers, factory
+- [ ] 04-02-PLAN.md — Prompt template, context assembly (retrieval + generation bridge)
 
 ---
 
