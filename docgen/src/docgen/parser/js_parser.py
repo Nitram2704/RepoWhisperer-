@@ -15,12 +15,14 @@ _js_parser = Parser(JS_LANGUAGE)
 _ts_parser = Parser(TS_LANGUAGE)
 _tsx_parser = Parser(TSX_LANGUAGE)
 
-# Simplified query for maximum compatibility across JS/TS/TSX grammars
-# We extract the name field via node.child_by_field_name("name") in Python
 _JS_TS_QUERY_SRC = """
 (function_declaration) @chunk
 (class_declaration) @chunk
 (method_definition) @chunk
+(lexical_declaration 
+  (variable_declarator 
+    name: (identifier)
+    value: [(arrow_function) (function_expression)])) @chunk
 """
 
 # Instantiating Queries and Cursors once for efficiency
@@ -63,7 +65,19 @@ def parse_js_ts(path: Path, source: str) -> list[CodeChunk]:
         return []
 
     for node in captures["chunk"]:
+        # Standard name extraction
         name_node = node.child_by_field_name("name")
+        
+        # Handle lexical declarations like 'const foo = () => {}'
+        if not name_node and node.type == "lexical_declaration":
+             # Find variable_declarator -> identifier
+             decl = node.child_by_field_name("declarations") # tree-sitter field name might vary
+             # Actually safer to just find child of type variable_declarator
+             for child in node.children:
+                 if child.type == "variable_declarator":
+                     name_node = child.child_by_field_name("name")
+                     break
+
         name = name_node.text.decode("utf8") if name_node else "<anonymous>"
         
         chunk_type = "class" if node.type == "class_declaration" else "function"
