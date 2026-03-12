@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(node C:/Users/marti/.claude/get-shit-done/bin/gsd-tools.js commit \"docs: initialize project\" --files .planning/PROJECT.md 2>&1)",
-      "Bash(node C:/Users/marti/.claude/get-shit-done/bin/gsd-tools.js commit \"docs: complete project research\" --files .planning/research/ 2>&1)",
-      "WebSearch"
-    ]
-  }
-}
