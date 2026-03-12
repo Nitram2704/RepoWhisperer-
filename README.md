@@ -1,4 +1,4 @@
-# Documentation Generator
+# RepoWhisperer
 
 This project aims to automate the generation of documentation from code, leveraging LLMs for content creation. It parses code files, extracts relevant information, and uses a language model to generate documentation in Markdown format.
 
